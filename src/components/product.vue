@@ -1,14 +1,14 @@
 <template>
 	<div>
 		<div
-			class="flex flex-row flex-wrap justify-start align-center gap-5"
+			class="flex flex-row flex-wrap md:justify-start align-center gap-5 sm:justify-center"
 			v-if="items.length > 0"
 		>
 			<!-- Product Card -->
 			<div 
 				v-for="(item, idx) in items"
 				:key="`${idx}`"
-				class="flex flex-col shadow-md cursor-pointer w-64 hover:-translate-y-1 duration-300"
+				class="flex flex-col shadow-md cursor-pointer md:w-64 sm:w-full hover:-translate-y-1 duration-300"
 			>
 				<!-- Preview -->
 				<div class="inline relative group h-48">

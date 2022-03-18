@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<ul class="ml-4 menu w-44">
+		<ul class="ml-4 menu md:w-44 sm:w-90">
 			<li class="py-2 uppercase text-sm cursor-pointer flex justify-between">
 				<span>Todos</span>
 				<span class="mr-3"><i class="fa-solid fa-arrow-right"></i></span>

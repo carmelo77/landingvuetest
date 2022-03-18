@@ -12,14 +12,21 @@ body {
     color: #3F454A;
 }
 
+.title-header {
+    color: #3F454A;
+}
+
+
 .home {
-    width: 100%;
+    min-width: 20em;
+    /* width: 100%; */
     height: 600px;
     background: #BC4E9C;
     background: url(./hero.png);
-    background-size: contain;
-    background-attachment: fixed;
-    object-fit: contain;
+    background-size: cover;
+    background-position:right;
+    background-repeat: no-repeat;
+    object-fit: cover;
     position: relative;
 }
 

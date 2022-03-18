@@ -2,7 +2,7 @@
 	<div>
 		<div class="form w-3/4 m-auto flex flex-wrap justify-around">
 			
-			<div class="flex flex-col space-y-2 w-5/12 py-2">
+			<div class="flex flex-col space-y-2 lg:w-5/12 py-2 sm:w-full">
 				<label for="default" class="select-none font-bold uppercase">Nombre</label>
 				<input
 					id="name"
@@ -13,7 +13,7 @@
 				/>
 			</div>
 
-			<div class="flex flex-col space-y-2 w-5/12 py-2">
+			<div class="flex flex-col space-y-2 lg:w-5/12 py-2 sm:w-full">
 				<label for="default" class="select-none font-bold uppercase">Apellido</label>
 				<input
 					id="lastname"
@@ -24,7 +24,7 @@
 				/>
 			</div>
 
-			<div class="flex flex-col space-y-2 w-5/12 py-2">
+			<div class="flex flex-col space-y-2 lg:w-5/12 py-2 sm:w-full">
 				<label for="default" class="select-none font-bold uppercase">Mail</label>
 				<input
 					id="email"
@@ -35,7 +35,7 @@
 				/>
 			</div>
 
-			<div class="flex flex-col space-y-2 w-5/12 py-2">
+			<div class="flex flex-col space-y-2 lg:w-5/12 py-2 sm:w-full">
 				<label for="default" class="select-none font-bold uppercase">Telefono</label>
 				<input
 					id="phone"
@@ -47,7 +47,7 @@
 			</div>
 
 		</div>
-		<div class="form w-3/4 m-auto flex justify-end py-12">
+		<div class="lg:form w-3/4 m-auto flex md:justify-end py-12 sm:flex sm:justify-center">
 			<button class="btn-gold w-32 py-2 rounded-full mx-10" @click.prevent="send">Enviar</button>
 		</div>
 	</div>
