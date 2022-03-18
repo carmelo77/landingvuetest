@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="form w-3/4 m-auto flex flex-wrap justify-around">
-		
+			
 			<div class="flex flex-col space-y-2 w-5/12 py-2">
 				<label for="default" class="select-none font-bold uppercase">Nombre</label>
 				<input
@@ -70,6 +70,12 @@ export default {
 
 	methods: {
 		send() {
+			const isValid = this.isValid();
+			
+			if(!isValid) {
+				return;
+			}
+
 			const params = {
 				method: 'POST',
 				headers: {
@@ -87,6 +93,26 @@ export default {
 				this.clear();
 			})
 			.catch(err => console.log(err))
+		},
+
+		isValid() {
+			if(this.form.name == "" || this.form.lastname == "" || 
+				this.form.email == "" || this.form.phone == "") {
+				this.$swal( 'Existen campos vacíos en tu formulario.' );
+				return false;
+			}
+
+			if(!this.emailValid(this.form.email)) {
+				this.$swal( 'Email inválido' );
+				return false;
+			}
+
+			return true;
+		},
+
+		emailValid(email) {
+			let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+			return regex.test(email);
 		},
 
 		clear() {

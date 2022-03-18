@@ -1,8 +1,8 @@
 <template>
 	<div>
-
 		<div
 			class="flex flex-row flex-wrap justify-start align-center gap-5"
+			v-if="items.length > 0"
 		>
 			<!-- Product Card -->
 			<div 
@@ -168,29 +168,14 @@
 </template>
 
 <script>
-import { BASE_URL } from '../api/api';
 
 export default {
-	data() {
-		return {
-			items: [],
+	props: {
+		items: {
+			required: true,
+			type: Array,
+			default: [],
 		}
 	},
-
-	mounted() {
-		this.index();
-	},
-
-	methods: {
-		index() {
-			fetch(`${BASE_URL}/articles`).then(res => {
-				return res.json();
-			})
-			.then(response => {
-				this.items = response;
-			})
-			.catch(err => console.log(err))
-		}
-	}
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-	<nav>
+	<nav class="animate__animated animate__fadeInDown">
 		<a class="mx-2 circle-fb rounded-full">
 			<i class="fa-brands fa-facebook-f"></i>
 		</a>

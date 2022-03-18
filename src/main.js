@@ -6,8 +6,10 @@ import store from './store'
 /** SweetAlert imports */
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
-
 Vue.use(VueSweetalert2);
+
+import 'animate.css';
+
 Vue.config.productionTip = false
 
 new Vue({
